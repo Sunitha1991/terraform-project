@@ -1,0 +1,30 @@
+#terraform installation
+1. Create a EC2 role in IAM #ec2full (give role name)
+2. launch ec2 instance (in drop down select IAM role as created one)
+3. rest all default
+4. #Create a working directory
+sudo mkdir -p /opt/terraform
+cd /opt/terraform
+
+Note:- few of the packages already installed 
+
+5.#Install wget utility
+sudo yum install wget -y
+
+
+6. #Download Terraform from Hasicorp website (https://releases.hashicorp.com/terraform/1.1.2/)
+sudo wget https://releases.hashicorp.com/terraform/1.1.2/terraform_1.1.2_linux_amd64.zip
+#Install unzip utility
+sudo yum install unzip -y
+
+7.#Unzip Terraform Zip file
+sudo unzip terraform_1.1.2_linux_amd64.zip
+8. Add terraform to PATH
+sudo mv /opt/terraform/terraform /usr/bin/
+
+9. terraform -version
+
+next we will proceed with creating files 
+
+cd ~
+git clone https://github.com/Sunitha1991/terraform-project.git
